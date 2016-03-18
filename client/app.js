@@ -6,6 +6,7 @@ angular.module( 'sample', [
   'sample.admin',
   'sample.takespace',
   'sample.addspace',
+  'sample.about',
   'angular-storage',
   'btford.socket-io',
   'angular-jwt'
@@ -18,6 +19,11 @@ angular.module( 'sample', [
       templateUrl: 'home/home.html',
       pageTitle: 'Homepage',
       requiresLogin: true
+    })
+    .when( '/about', {
+      controller: 'AboutCtrl',
+      templateUrl: 'about/about.html',
+      pageTitle: 'About'
     })
     .when( '/login', {
       controller: 'LoginCtrl',
