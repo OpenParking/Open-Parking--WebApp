@@ -6,7 +6,9 @@
                                     
                                       <h6 id="zonelightboxname"></h6>
                                       <p id="zonelightboxspaces"></p>
-                                      <iframe id="zonestreaming" width="420" height="315" src="" frameborder="0" allowfullscreen></iframe><br>
+                                      <div>
+                                      <iframe id="zonestreaming" width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                                      </div>
                                       <a class="btn" onclick="lightboxOut('spacelight','spacefade')">Ok</a>
                                   </div>
                                   <div class="w-col w-col-4"></div>
@@ -20,7 +22,7 @@
         <div id="spacefade" class="black_overlay" onclick="lightboxOut('spacelight','spacefade')"></div>
   <div class="row">
     <div class="container" style="padding-top: 30px;">
-      <div class="row center" style="min-height: 1000px;">
+      <div class="row center" style="min-height: 800px;">
         <div class="col s12 m7">
 
                   <div class="card" id="adminchartcardhold" style="display:none;">
@@ -42,10 +44,15 @@
                   </div>
                 </div>
         <div class="col s12 m5">
-                  <h2>Welcome {{auth.profile.nickname}}</h2>
-                  <img src="{{auth.profile.picture}}" />
         </div>
 	    </div>
+
+      
+              <div class="row center">
+                  <h2>Welcome {{auth.profile.nickname}}</h2>
+                  <img src="{{auth.profile.picture}}" />
+                  </div>
+
 	  </div>
   </div>
 </div>

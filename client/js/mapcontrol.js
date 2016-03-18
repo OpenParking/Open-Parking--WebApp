@@ -1,10 +1,13 @@
 
+//alert(window.innerWidth);
 window.onscroll = function() {myFunction()};
 window.onload = function(){
   var scrollPosition = window.pageYOffset;
   var windowSize     = window.innerHeight;
   var bodyHeight     = document.body.offsetHeight;
   console.log("LOAD!"+Math.max(bodyHeight - (scrollPosition + windowSize), 0));
+
+  if(window.innerWidth > 600){
     if (document.body.scrollTop > 40 && (Math.max(bodyHeight - (scrollPosition + windowSize), 0)) > 200 ) {
         document.getElementById("adminchartcard").setAttribute('style', 'position: fixed; top: 0px;');
         document.getElementById("adminchartcardhold").setAttribute('style', 'display: block');
@@ -17,13 +20,15 @@ window.onload = function(){
         document.getElementById("adminchartcard").removeAttribute('style');
         document.getElementById("adminchartcardhold").setAttribute('style', 'display: none');
     }
-}
+  }
 
 function myFunction() {
   var scrollPosition = window.pageYOffset;
 var windowSize     = window.innerHeight;
 var bodyHeight     = document.body.offsetHeight;
   console.log(Math.max(bodyHeight - (scrollPosition + windowSize), 0));
+
+  if(window.innerWidth > 600){
     if (document.body.scrollTop > 40 && (Math.max(bodyHeight - (scrollPosition + windowSize), 0)) > 100 ) {
         document.getElementById("adminchartcard").setAttribute('style', 'position: fixed; top: -10px;-webkit-transition: position 2s; /* For Safari 3.1 to 6.0 */transition: position 2s;');
         document.getElementById("adminchartcardhold").setAttribute('style', 'display: block;');
@@ -35,4 +40,8 @@ var bodyHeight     = document.body.offsetHeight;
         document.getElementById("adminchartcard").removeAttribute('style');
         document.getElementById("adminchartcardhold").setAttribute('style', 'display: none');
     }
+  }
+  else{
+
+  }
 }
